@@ -44,8 +44,14 @@ void setup()
 void loop()
 {
     // turn the LED on and off
-    digitalWrite(LED_PIN, LED_ON);
-    delay(50);
-    digitalWrite(LED_PIN, LED_OFF);
-    delay(50);
+    flash(250); flash(250); flash(250); // S
+    delay(2); // otherwise the flashes run together
+    flash(500); flash(500); flash(500);
+    delay(2);// O
+    flash(250); flash(250); flash(250); // S
+    delay(2);
+    
 }
+void flash()
+{
+    
